@@ -51,6 +51,20 @@ User pan.jian
 IdentityFile ~/.ssh/id_rsa_gitlab
 ```
 
+如果remote pull和push有问题，需要清除全局的name和email，并且在每个仓库下设置单独的name和email
+
+1.取消global
+```terminal
+git config --global --unset user.name
+git config --global --unset user.email
+```
+
+2.设置每个repo的自己的user.email
+```terminal
+git config  user.email "xxxx@xx.com"
+git config  user.name "xxxx"
+```
+
 参考：
 https://gist.github.com/suziewong/4378434
 http://www.jianshu.com/p/89cb26e5c3e8
