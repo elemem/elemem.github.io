@@ -1,15 +1,16 @@
 ﻿---
 category: books-2017
+toc: true
 published: true
-layout: splash
+layout: single
 title: win10多git账号设置sshkey
 description: the more you read, the more you think, better you'll be.
 ---
 
-# 多sshkey设置的必要性
+## 多sshkey设置的必要性
 同一台PC，需要同时管理公司的girrit、公司的gitlab和gitbub的仓库。其中公司仓库使用同一个公司邮箱，github使用自己的gmail邮箱。由于有多个邮箱，而sshkey又与邮箱绑定，因此必须设置多个sshkey。
 
-# 多sshkey设置方法
+## 多sshkey设置方法
 单个sshkey的配置，可以查看以下流程：
 - http://www.cnblogs.com/tinyphp/p/5025311.html
 - https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
@@ -51,7 +52,7 @@ User pan.jian
 IdentityFile ~/.ssh/id_rsa_gitlab
 ```
 
-如果remote pull和push有问题，需要清除全局的name和email，并且在每个仓库下设置单独的name和email
+如果remote pull和push有问题，需要清除全局的name和email，并且在每个仓库下设置单独的name和email。
 
 1.取消global
 ```terminal
@@ -64,7 +65,8 @@ git config --global --unset user.email
 git config  user.email "xxxx@xx.com"
 git config  user.name "xxxx"
 ```
+由于local的设置会覆盖全局的，因此也可以保留全局的设置，只是在需要设置的repo中设置自己的name和email。比如我大部分项目都用公司的配置，那我就只需要在gitbug的repo中设置单独的name和email。
 
 参考：
-https://gist.github.com/suziewong/4378434
-http://www.jianshu.com/p/89cb26e5c3e8
+- https://gist.github.com/suziewong/4378434
+- http://www.jianshu.com/p/89cb26e5c3e8
