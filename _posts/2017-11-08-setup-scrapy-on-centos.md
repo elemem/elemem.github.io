@@ -7,7 +7,7 @@ title: centos下搭建scrapy运行环境
 description: the more you read, the more you think, better you'll be.
 ---
 
-##环境说明
+## 环境说明
 开发环境：目前我在windows上做开发，需要安装scrapy和scrapyd-client(用于部署)
 
 运行环境：在linux下运行，需要安装scrapy、scrapyd、scrapyd-client（可选）、spiderkeeper(job调度与控制)。我使用的服务器的IP为172.16.12.3
@@ -107,7 +107,7 @@ spiderkeeper --server=http://172.16.12.3:6800
 这时你可以在你本地，通过“http://172.16.12.3:5000”访问spiderkeeper
 
 ## 部署爬虫
-我是在windows下部署爬虫的，使用的工程[wallpaper](https://github.com/elemem/wallpaper)
+我是在windows下部署爬虫的，使用工程[wallpaper](https://github.com/elemem/wallpaper)
 
 修改爬虫工程目录下的scrapy.cfg，把URL改成scrapyd服务器的IP与端口
 ```
