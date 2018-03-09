@@ -1,7 +1,8 @@
 ﻿---
 category: books-2017
+toc: true
 published: true
-layout: splash
+layout: single
 title: win10系统搭建github pages博客
 description: the more you read, the more you think, better you'll be.
 ---

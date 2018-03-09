@@ -1,5 +1,6 @@
 ---
 category: 2017
+toc: true
 published: true
 layout: splash
 title: 在aws上搭建shadowsocks服务
